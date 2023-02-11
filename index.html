@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e10f5ae76.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hello, I'm <span>Anuj</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="Images/pic2.jpg">
+                </div>
+                <div class="col2">
+                    <h1 class="subtitle">About Me</h1><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus ex mollitia consectetur a culpa nobis vitae magnam natus fuga soluta, voluptatem iste quia placeat ut tenetur. Non, praesentium vel!</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>HTML CSS JS</li>
+                            <li><span>Backend</span><br>Node.Js MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech</span><br>The LNM Institute of Information Technology<br>2020-2024</li>
+                            <li><span>12<sup>th</sup></span><br>Maheshwari Public School, Jawahar Nagar</li>
+                            <li><span>10<sup>th</sup></span><br>Maheshwari Public School, Jawahar Nagar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------services------->
+    
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Skills</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore doloremque ab, magnam aperiam eos minus vitae labore quis. Magnam, sit eaque. Accusamus laborum ipsum vero ipsa perferendis doloribus quisquam.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Backend</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore doloremque ab, magnam aperiam eos minus vitae labore quis. Magnam, sit eaque. Accusamus laborum ipsum vero ipsa perferendis doloribus quisquam.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------portfolio------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="work-list">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Portfolio Website</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore doloremque ab, magnam aperiam eos minus vitae labore quis. Magnam, sit eaque. Accusamus laborum ipsum vero ipsa perferendis doloribus quisquam.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Auto Network Login</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore doloremque ab, magnam aperiam eos minus vitae labore quis. Magnam, sit eaque. Accusamus laborum ipsum vero ipsa perferendis doloribus quisquam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------contact-------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> anujg1368@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-9461154721</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/anuj-gupta-849b50206/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/anujgupta1368"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Resume_Anuj_SDE.pdf" download class="btn btn2" target="_blank">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2 btn3">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Anuj Gupta</p>
+        </div>
+    </div>
+
+    <script src="skills.js"></script>
+    <script src="sidemenu.js"></script>
+    <script src="contactform.js"></script>
+</body>
+</html>
